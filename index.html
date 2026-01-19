@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Quest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <header>
+    <h1>Life Quest</h1>
+  </header>
+
+  <main id="app">
+
+    <!-- HOME TAB -->
+    <section id="tab-home" class="tab active">
+      <h2>Home</h2>
+      <p>Welcome back, hero.</p>
+    </section>
+
+    <!-- TO DO TODAY TAB -->
+    <section id="tab-todo" class="tab">
+      <h2>To Do Today</h2>
+
+      <div id="tasks-area">
+        <section id="skills"></section>
+
+        <h3>Today’s Quests</h3>
+
+        <section id="add-task">
+          <input id="task-title" placeholder="New quest..." />
+          <select id="task-skill">
+            <option value="focus">Focus</option>
+            <option value="craft">Craft</option>
+            <option value="vitality">Vitality</option>
+          </select>
+          <input id="task-xp" type="number" value="20" />
+          <select id="task-recurrence">
+            <option value="once">Once</option>
+            <option value="daily">Daily</option>
+          </select>
+          <button id="add-task-btn">Add</button>
+        </section>
+
+        <section id="task-list"></section>
+      </div>
+
+      <div id="routine-area">
+        <h3>Routines</h3>
+        <section id="routine-list"></section>
+
+        <h4>Add Routine</h4>
+        <section id="add-routine">
+          <input id="routine-name" placeholder="Routine name" />
+          <select id="routine-recurrence">
+            <option value="none">None</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+          </select>
+          <select id="routine-autoreset">
+            <option value="true">Auto Reset</option>
+            <option value="false">Manual Reset</option>
+          </select>
+          <button id="add-routine-btn">Add Routine</button>
+        </section>
+
+        <h4>Add Routine Step</h4>
+        <section id="add-step">
+          <input id="step-title" placeholder="Step title" />
+          <input id="step-xp" type="number" value="10" />
+          <select id="step-skill">
+            <option value="focus">Focus</option>
+            <option value="craft">Craft</option>
+            <option value="vitality">Vitality</option>
+          </select>
+          <select id="step-routine"></select>
+          <button id="add-step-btn">Add Step</button>
+        </section>
+      </div>
+    </section>
+
+    <!-- CALENDAR TAB -->
+    <section id="tab-calendar" class="tab">
+      <h2>Calendar</h2>
+      <p>(Coming soon)</p>
+    </section>
+
+    <!-- STORY TAB -->
+    <section id="tab-story" class="tab">
+      <h2>Story</h2>
+      <div id="story-content"></div>
+    </section>
+
+    <!-- CHARACTER TAB -->
+    <section id="tab-character" class="tab">
+      <h2>Character</h2>
+      <div id="character-content">
+        <div id="character-levels"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DAY COMPLETE OVERLAY -->
+  <div id="day-complete" hidden>
+    <h2>Day Complete 🌙</h2>
+    <p>You honored today’s quests.</p>
+    <button id="close-day">Continue</button>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav id="bottom-nav">
+    <button class="nav-btn active" data-tab="home">Home</button>
+    <button class="nav-btn" data-tab="todo">To Do</button>
+    <button class="nav-btn" data-tab="calendar">Calendar</button>
+    <button class="nav-btn" data-tab="story">Story</button>
+    <button class="nav-btn" data-tab="character">Character</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
