@@ -1,1 +1,129 @@
 
+/* ========== BASIC RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0a0f1b;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ========== HEADER ========== */
+header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========== MAIN CONTENT ========== */
+main#app {
+  padding: 1rem;
+  padding-bottom: 5.5rem; /* space for bottom nav */
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+/* ========== TASK + ROUTINE AREA ========== */
+#add-task,
+#add-routine,
+#add-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px auto;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#add-task input,
+#add-task select,
+#add-task button,
+#add-routine input,
+#add-routine select,
+#add-routine button,
+#add-step input,
+#add-step select,
+#add-step button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#task-list .task,
+#routine-list .routine,
+.routine-step {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* completed style */
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* ========== BOTTOM NAV ========== */
+nav#bottom-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: rgba(10, 15, 27, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 1rem 0;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.nav-btn.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ========== DAY COMPLETE OVERLAY ========== */
+[hidden] {
+  display: none !important;
+}
+
+#day-complete {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#day-complete button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  margin-top: 1rem;
+}
